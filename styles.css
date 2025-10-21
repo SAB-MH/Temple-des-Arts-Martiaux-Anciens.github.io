@@ -5,10 +5,8 @@ box-sizing: border-box;
 }
 
 body {
-font-family: Georgia, serif;
 background-color: #F5E6D3;
 color: #3D1F0C;
-line-height: 1.6;
 }
 
 .entete {
@@ -29,49 +27,48 @@ width: auto;
 }
 
 .menuprin {
-font-size: 18px;
+position: relative;
+display: inline-block;
 }
 
-.menudero summary {
+.menu > a {
 background-color: #2A7B7B;
 color: #F5E6D3;
 padding: 12px 25px;
-cursor: pointer;
-border-radius: 8px;
-list-style: none;
+text-decoration: none;
 font-weight: bold;
 border: 2px solid #1F5E5E;
+border-radius: 8px;
 }
 
-.menudero summary:hover {
+.menu > a:hover {
 background-color: #1F5E5E;
 }
 
-.menudero ul {
+.submenu {
+display: none;
 position: absolute;
 background-color: #3D1F0C;
-list-style: none;
-margin-top: 5px;
 padding: 10px;
 border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.menudero li {
-margin: 8px 0;
-}
-
-.menudero a {
+.submenu a {
+display: block;
 color: #F5E6D3;
 text-decoration: none;
-display: block;
 padding: 8px 15px;
-border-radius: 5px;
 }
 
-.menudero a:hover {
+.submenu a:hover {
 background-color: #2A7B7B;
 }
+
+/* affichage au survol */
+.menu:hover .submenu {
+display: block;
+}
+
 
 main {
 max-width: 1200px;
